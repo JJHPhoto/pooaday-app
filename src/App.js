@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Still connected to server app</p>
+        <p>This will be the server repo.</p>
         <a
           className="App-link"
           href="https://reactjs.org"
