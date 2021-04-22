@@ -1,46 +1,20 @@
 import React from "react";
-import {
-  MDBBtn,
-  MDBCard,
-  MDBCardBody,
-  MDBCardImage,
-  MDBCardTitle,
-  MDBCardText,
-  MDBRow,
-  MDBCol,
-  MDBView,
-  MDBIcon,
-} from "mdbreact";
+// import mia from "../photos/TeamImageMia.jpg";
 
 function DeveloperCards(props) {
   return (
-    <MDBCol md="4">
-      <MDBCard>
-        <MDBCardImage
-          hover
-          overlay="white-light"
-          className="card-img-top"
-          src={props.image}
-          alt="man"
-        />
-
-        <MDBCardBody cascade className="text-center">
-          <MDBCardTitle className="card-title">
-            <strong>{props.name}</strong>
-          </MDBCardTitle>
-
-          <p className="font-weight-bold blue-text">{props.tile}</p>
-
-          <MDBCardText>{props.description}</MDBCardText>
-
-          <MDBCol md="12" className="d-flex justify-content-center">
-            {props.github}
-            {props.linkedin}
-            {props.portfolio}
-          </MDBCol>
-        </MDBCardBody>
-      </MDBCard>
-    </MDBCol>
+    <div class="card w-25">
+      {/* need to add rows somehow */}
+      <img src={props.image} class="card-img-top" alt="dev pic" />
+      <div class="card-body">
+        <h5 class="card-name">{props.name}</h5>
+        <h6 class="card-role">{props.role}</h6>
+        <p class="card-text">{props.description}</p>
+        <a href="#!" class="btn btn-primary">
+          Button
+        </a>
+      </div>
+    </div>
   );
 }
 

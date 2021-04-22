@@ -1,9 +1,14 @@
 import React from "react";
+import Header from "../../components/Header";
+import LoginForm from "../../components/LoginForm";
+// import Developers from "../Developers";
 
 function Home() {
   return (
-    <div>
-      <h1>This will be the first page that users see.</h1>
+    <div className="container">
+      <Header />
+      <LoginForm />
+      {/* <Developers /> */}
     </div>
   );
 }
