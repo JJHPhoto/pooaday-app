@@ -1,9 +1,19 @@
 import React from "react";
+import { MDBJumbotron, MDBContainer, MDBIcon } from "mdbreact";
 
 function Header() {
   return (
-    <div>
-      <header>
+    <MDBJumbotron fluid>
+      <MDBContainer>
+        <h2 className="display-4">Pooaday</h2>
+        <p className="lead">
+          Made with love by Lana, Josh and Mia.
+          {/* <MDBIcon icon="heart" size="2x" className="red-text pr-3" />{" "} */}
+        </p>
+      </MDBContainer>
+    </MDBJumbotron>
+    // <div>
+    /* <header>
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container-fluid">
             <button
@@ -51,12 +61,12 @@ function Header() {
         <div class="p-5 text-center">
           <h1 class="mb-3">Pooaday</h1>
           <h4 class="mb-3">Made with love by Lana, Josh and Mia</h4>
-          {/* <a class="btn btn-primary" href="" role="button">
+          <a class="btn btn-primary" href="" role="button">
             Call to action
-          </a> */}
+          </a>
         </div>
-      </header>
-    </div>
+      </header> */
+    // </div>
   );
 }
 

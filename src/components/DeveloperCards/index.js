@@ -10,9 +10,6 @@ function DeveloperCards(props) {
         <h5 class="card-name">{props.name}</h5>
         <h6 class="card-role">{props.role}</h6>
         <p class="card-text">{props.description}</p>
-        <a href="#!" class="btn btn-primary">
-          Button
-        </a>
       </div>
     </div>
   );
