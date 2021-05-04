@@ -16,9 +16,9 @@ const GlobalNavbar = (props) => {
 				</Navbar.Brand>
 				<Nav className="mr-auto">
 					<Nav.Link href="/">Home</Nav.Link>
-					<Nav.Link href="#pricing">About</Nav.Link>
-					<Nav.Link href="#features">My entry</Nav.Link>
-					<Nav.Link href="#pricing">My bowel</Nav.Link>
+					<Nav.Link href="#about">About</Nav.Link>
+					<Nav.Link href="#myentry">My entry</Nav.Link>
+					<Nav.Link href="#mybowel">My bowel</Nav.Link>
 				</Nav>
 			</Navbar>
 		</div>
