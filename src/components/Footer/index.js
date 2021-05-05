@@ -5,7 +5,7 @@ function Footer() {
 	return (
 		<div>
 			<Navbar
-				fixed="bottom"
+				// fixed="bottom"
 				className="justify-content-center"
 				activeKey="/home"
 			>

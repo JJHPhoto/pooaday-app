@@ -7,7 +7,9 @@ import {
 	Jumbotron,
 } from "react-bootstrap";
 import { useAccordionToggle } from "react-bootstrap/AccordionToggle";
-import RangeSlider from "react-bootstrap-range-slider";
+import StyleCard from "../../components/StyleCard/StyleCard";
+
+import TimeCard from "../../components/TimeCard/TimeCard";
 
 function ContextAwareToggle({ children, eventKey, callback }) {
 	const currentEventKey = useContext(AccordionContext);
@@ -33,7 +35,6 @@ function ContextAwareToggle({ children, eventKey, callback }) {
 }
 
 function BM() {
-	const [value, setValue] = useState(0);
 	return (
 		<Container>
 			<Jumbotron fluid>
@@ -44,26 +45,23 @@ function BM() {
 				</p>
 			</Jumbotron>
 			<Accordion defaultActiveKey="0">
+				<TimeCard />
+				<StyleCard />
+
 				<Card>
-					<Card.Header>
-						<ContextAwareToggle eventKey="0">Click me!</ContextAwareToggle>
-					</Card.Header>
-					<Accordion.Collapse eventKey="0">
-						<Card.Body>
-							<RangeSlider
-								value={value}
-								onChange={(changeEvent) => setValue(changeEvent.target.value)}
-							/>
-							Hello! I'm the body
-						</Card.Body>
+					<Accordion.Toggle as={Card.Header} eventKey="2">
+						Click me!
+					</Accordion.Toggle>
+					<Accordion.Collapse eventKey="2">
+						<Card.Body>Hello! I'm the body</Card.Body>
 					</Accordion.Collapse>
 				</Card>
 				<Card>
-					<Card.Header>
-						<ContextAwareToggle eventKey="1">Click me!</ContextAwareToggle>
-					</Card.Header>
-					<Accordion.Collapse eventKey="1">
-						<Card.Body>Hello! I'm another body</Card.Body>
+					<Accordion.Toggle as={Card.Header} eventKey="3">
+						Click me!
+					</Accordion.Toggle>
+					<Accordion.Collapse eventKey="3">
+						<Card.Body>Hello! I'm the body</Card.Body>
 					</Accordion.Collapse>
 				</Card>
 			</Accordion>
