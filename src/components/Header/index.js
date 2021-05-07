@@ -1,14 +1,23 @@
 import React, { useState } from "react";
 import { MDBJumbotron, MDBContainer, MDBIcon } from "mdbreact";
-import { Jumbotron, Button } from "react-bootstrap";
+import { Jumbotron, Button, Modal } from "react-bootstrap";
 import "./style.css";
 import SignUpModal from "../SignUpModal/SignUpModal";
+import SignUpForm from "../SignUpForm";
 
 function Header() {
 	const [show, setShow] = useState(false);
 
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
+	const onSignUpFormSubmit = (e) => {
+		e.preventDefault();
+		handleClose();
+	};
+	const onLoginFormSubmit = (e) => {
+		e.preventDefault();
+		handleClose();
+	};
 	return (
 		<div>
 			{/* <MDBJumbotron fluid>
@@ -30,9 +39,27 @@ function Header() {
 							show={show}
 							onHide={handleClose}
 							onClick={handleClose}
+              onSubmit ={onSignUpFormSubmit }
 						/>
 					</Button>
 				</p>
+				{/* <Button variant="primary" onClick={handleShow}>
+					Launch Form modal
+				</Button>
+
+				<Modal show={show} onHide={handleClose}>
+					<Modal.Header closeButton>
+						<Modal.Title>Login Form</Modal.Title>
+					</Modal.Header>
+					<Modal.Body>
+						<SignUpForm onSubmit={onLoginFormSubmit} />
+					</Modal.Body>
+					<Modal.Footer>
+						<Button variant="secondary" onClick={handleClose}>
+							Close Modal
+						</Button>
+					</Modal.Footer>
+				</Modal> */}
 			</Jumbotron>
 		</div>
 

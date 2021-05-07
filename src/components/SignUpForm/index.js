@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
 
-function SignUpForm() {
+function SignUpForm({ onSignUpFormSubmit, handleClose }) {
+
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
 	return (
 		<div>
-			<Form>
+			<Form onSubmit={onSignUpFormSubmit}>
+        {/* props not passing correctly. it should be changed  yellow  */}
 				<Row>
 					<Col>
 						<Form.Control placeholder="First name" />
@@ -15,21 +19,37 @@ function SignUpForm() {
 				</Row>
 				<Form.Group controlId="formBasicEmail">
 					<Form.Label></Form.Label>
-					<Form.Control type="email" placeholder="Enter email" />
+					<Form.Control
+						type="email"
+						placeholder="Enter email"
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
+					/>
 				</Form.Group>
 				<Form.Group controlId="formBasicPassword">
 					<Form.Label></Form.Label>
-					<Form.Control type="password" placeholder="Password" />
+					<Form.Control
+						type="password"
+						placeholder="Password"
+						value={password}
+						onChange={(e) => setPassword(e.target.value)}
+					/>
 				</Form.Group>
 				<Form.Group controlId="formBasicCheckbox">
 					<Form.Check
 						type="checkbox"
 						label="Subscribe to our newsletter"
-						checked
+						// checked 
+            // need to have onChange 
 					/>
 				</Form.Group>
-				<Button variant="primary btn-block" type="submit">
-					Submit
+				<Button
+					variant="primary"
+					type="submit"
+					onSubmit={onSignUpFormSubmit}
+					block
+				>
+					SIGN UP
 				</Button>
 			</Form>
 		</div>

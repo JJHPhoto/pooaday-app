@@ -3,7 +3,7 @@ import React from "react";
 import { Modal, Button } from "react-bootstrap";
 import SignUpForm from "../SignUpForm";
 
-const SignUpModal = ({ show, handleClose }) => {
+const SignUpModal = ({ handleClose, onSignUpFormSubmit, show }) => {
 	return (
 		<div>
 			<Modal
@@ -17,7 +17,7 @@ const SignUpModal = ({ show, handleClose }) => {
 					<Modal.Title>Sign up</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
-					<SignUpForm />
+					<SignUpForm onSubmit={onSignUpFormSubmit} />
 				</Modal.Body>
 				<Modal.Footer>
 					<Button variant="secondary" onClick={handleClose}>
