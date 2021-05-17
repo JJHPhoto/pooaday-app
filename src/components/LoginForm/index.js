@@ -1,6 +1,6 @@
 import React from "react";
 // import "./LoginForm.css";
-// import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn, MDBBox } from "mdbreact";
 
 function LoginForm() {
   return (
@@ -35,11 +35,12 @@ function LoginForm() {
     //   </MDBRow>
     // </MDBContainer>
 
-    //===========================
+    //=========================== hook error here.. 
     // Material Design Bootstrap form
-
+    
     // <div class="login w-50">
-    <form>
+    <MDBBox display="flex" justifyContent="center" >
+        <form >
       <div class="form-outline mb-5">
         <input type="email" id="form2Example1" class="form-control" />
         <label class="form-label" for="form2Example1">
@@ -86,6 +87,8 @@ function LoginForm() {
         </p>
       </div>
     </form>
+      </MDBBox>
+    
     // </div>
   );
 }

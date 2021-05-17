@@ -1,0 +1,4 @@
+.intro {
+	box-shadow: none !important;
+    /* need to get rid of !important */
+}
