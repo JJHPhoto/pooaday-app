@@ -1,5 +1,5 @@
 import React from "react";
-// import "./main.sass";
+import "./main.sass";
 import GlobalNavbar from "./components/GlobalNavbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -12,7 +12,6 @@ function App() {
       <GlobalNavbar />
       <Home />
       <BM />
-
       <Footer />
     </div>
   );

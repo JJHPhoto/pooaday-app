@@ -1,3 +1,3 @@
-# Pooaday app
+# [Pooaday app](https://www.pooaday.com/)
 
-Take 8?
+Welcome to our app!
